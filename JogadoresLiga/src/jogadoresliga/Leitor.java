@@ -5,9 +5,8 @@ import LigaJogadores.model.Liga;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import jogadoresliga.LeitorDadosJogadores;
 
-public class Jogadores {
+public class Leitor {
 
     public static void main(String[] args) {
         LeitorDadosJogadores leitor = new LeitorDadosJogadores();
