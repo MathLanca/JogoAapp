@@ -21,6 +21,11 @@ public class Liga implements Serializable,Comparable<Liga>{
     public void setNome(String nome){
         this.nome = nome;
     }
+
+    public List<Time> getTimes() {
+        return times;
+    }
+    
     public void addTime(Time time){
         this.times.add(time);
     }

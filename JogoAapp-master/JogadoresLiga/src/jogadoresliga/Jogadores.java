@@ -1,7 +1,9 @@
+
 package jogadoresliga;
 
 import LigaJogadores.model.Confederacao;
 import LigaJogadores.model.Liga;
+import LigaJogadores.model.Time;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -38,7 +40,10 @@ public class Jogadores {
             Collections.sort(conf.getLigas());
             for (Liga liga : conf.getLigas()) {
                 System.out.println("\t" + liga.getNome());
-
+                Collections.sort(liga.getTimes());
+                for(Time time : liga.getTimes()){
+                    System.out.println("\t"+time.getNome());
+                }
             }
         }
     }
