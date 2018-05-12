@@ -1,14 +1,8 @@
 package pacote.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
-/**
- *
- * @author 31722792
- */
 public class Jogador implements Serializable, Comparable<Jogador> {
     private String nome;
     private String dataNasc;

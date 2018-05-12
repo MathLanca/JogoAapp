@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pacote.model;
 
 import java.io.Serializable;
@@ -10,10 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/**
- *
- * @author 31722792
- */
 public class Liga implements Serializable, Comparable<Liga> {
     private String nome;
     public List<Time> times = new ArrayList();
@@ -66,6 +57,8 @@ public class Liga implements Serializable, Comparable<Liga> {
             } catch(IndexOutOfBoundsException ex){
                 System.out.println("");
             }*/
+            
+            // Vamos ver essa parte do Jogo
             for(int t1 = 0; t1 < numTimes - 1; t1++){
                 for(int t2 = t1; t2 < numTimes; t2++){
                     this.jogos[numJogo] = new Jogo(times[t1],times[t2]);
