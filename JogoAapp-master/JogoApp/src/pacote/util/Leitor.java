@@ -48,15 +48,15 @@ public class Leitor {
             
             }
             
-            liga.organizarJogos();
+            /*liga.organizarJogos();
             Jogo jogo = new Jogo();
-            System.out.println(jogo.getJogo());
+            System.out.println(jogo.getJogo());*/
             
         }
         
         
         //ler os dados 
-        /*Collections.sort(confederacoes);
+        Collections.sort(confederacoes);
         for (Confederacao conf:confederacoes){
             System.out.println(conf.getNome());
             Collections.sort(conf.getLigas());
@@ -69,7 +69,7 @@ public class Leitor {
                     }
                 }
             }
-        }*/
+        }
             
     }
        

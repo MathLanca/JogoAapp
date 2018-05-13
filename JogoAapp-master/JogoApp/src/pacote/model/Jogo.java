@@ -46,10 +46,7 @@ public class Jogo {
             return false;
         }
         final Jogo other = (Jogo) obj;
-        if (!Objects.equals(this.t1, other.t1)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.t1, other.t1);
     }
     
     
