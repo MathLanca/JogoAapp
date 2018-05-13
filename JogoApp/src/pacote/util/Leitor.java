@@ -47,7 +47,9 @@ public class Leitor {
             
             }
             
-            liga.organizarJogos();
+            /*liga.organizarJogos();
+            Jogo jogo = new Jogo();
+            System.out.println(jogo.getJogo());*/
             
         }
         

@@ -8,8 +8,10 @@ import java.util.Objects;
 public class Liga implements Serializable, Comparable<Liga> {
     private String nome;
     public List<Time> times = new ArrayList();
+    public Time[] times2;
     public int numTimes;
     public Jogo[] jogos;
+    //public List<Jogo> jogos = new ArrayList();
     
     public Liga(){
         
@@ -45,7 +47,7 @@ public class Liga implements Serializable, Comparable<Liga> {
     }*/
     
     public void organizarJogos(){
-        
+        int numJogo = 0;
         this.numTimes = times.size();
         //System.out.println(numTimes);
         if (numTimes <= 10){
@@ -61,15 +63,18 @@ public class Liga implements Serializable, Comparable<Liga> {
             // Vamos ver essa parte do Jogo
             for(int t1 = 0; t1 < numTimes - 1; t1++){
                 for(int t2 = t1; t2 < numTimes; t2++){
-                    this.jogos[numJogo] = new Jogo(times[t1],times[t2]);
+                    this.jogos[numJogo] = new Jogo(times2[t1],times2[t2]);
+                    numJogo += 1;
                 }
             }
         } else{
+            /*
             for(Time t1 : times){
                 for(Time t2 : times){
                     System.out.println(t1.getNome() + " X " + t2.getNome());
                 }
-            }
+            }*/
+            System.out.println("aaa");
           }
     }
     
