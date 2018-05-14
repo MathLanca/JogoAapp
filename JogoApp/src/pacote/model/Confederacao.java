@@ -42,30 +42,7 @@ public class Confederacao implements Serializable, Comparable<Confederacao> {
     public void addLiga(Liga liga){
         this.ligas.add(liga);
     }
-    /*
-    public List<Time> getTimes() {
-        return times;
-    }
-
-    public void setTimes(List<Time> times) {
-        this.times = times;
-    }
     
-    public void addTime(Time time){
-        this.times.add(time);
-    }    
-    
-    public List<Jogador> getJogadores() {
-        return jogadores;
-    }
-
-    public void setJogadores(List<Jogador> jogadores) {
-        this.jogadores = jogadores;
-    }
-    
-    public void addJogador(Jogador jogador){
-        this.jogadores.add(jogador);
-    }*/
     @Override
     public int hashCode() {
         int hash = 5;

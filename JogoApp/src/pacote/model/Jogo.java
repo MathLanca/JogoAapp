@@ -1,8 +1,9 @@
 package pacote.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Jogo {
+public class Jogo implements Serializable{
     private Time t1;
     private Time t2;
     
@@ -16,9 +17,7 @@ public class Jogo {
     }
 
     public String getJogo() {
-        String time1 = t1.toString();
-        String time2 = t2.toString();
-        return time1 + " X " + time2;
+        return t1.getNome() + " X " + t2.getNome();
     }
 
     public void setJogo(Time t1, Time t2) {
@@ -46,8 +45,12 @@ public class Jogo {
             return false;
         }
         final Jogo other = (Jogo) obj;
-        return Objects.equals(this.t1, other.t1);
+        if (!Objects.equals(this.t1, other.t1)) {
+            return false;
+        }
+        return true;
     }
+
     
     
 }

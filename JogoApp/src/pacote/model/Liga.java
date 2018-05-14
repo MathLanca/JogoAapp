@@ -11,7 +11,6 @@ public class Liga implements Serializable, Comparable<Liga> {
     public Time[] times2;
     public int numTimes;
     public Jogo[] jogos;
-    //public List<Jogo> jogos = new ArrayList();
     
     public Liga(){
         
@@ -41,30 +40,16 @@ public class Liga implements Serializable, Comparable<Liga> {
         this.times.add(time);
     }
     
-    /*public int getNumTimes(){
-        this.numTimes = times.size();
-        return this.numTimes;
-    }*/
-    
     public void organizarJogos(){
-        int numJogo = 0;
-        this.numTimes = times.size();
-        //System.out.println(numTimes);
+        this.numTimes = this.times.size();
+        System.out.println("Num times: " + numTimes);
         if (numTimes <= 10){
-            /*try{
-                for (int a = 0; a < numTimes; a++){
-                    System.out.println(times.get(a).getNome() + " X " + times.get(a+1).getNome());
-                    //System.out.println(times.get(a+1).getNome() + " X " + times.get(a).getNome());
-                }
-            } catch(IndexOutOfBoundsException ex){
-                System.out.println("");
-            }*/
-            
-            // Vamos ver essa parte do Jogo
             for(int t1 = 0; t1 < numTimes - 1; t1++){
-                for(int t2 = t1; t2 < numTimes; t2++){
-                    this.jogos[numJogo] = new Jogo(times2[t1],times2[t2]);
-                    numJogo += 1;
+                for(int t2 = t1 + 1; t2 < numTimes; t2++){
+                    Jogo jogo1 = new Jogo(times.get(t1), times.get(t2));
+                    Jogo jogo2 = new Jogo(times.get(t2), times.get(t1));
+                    System.out.println(jogo1.getJogo());
+                    System.out.println(jogo2.getJogo());
                 }
             }
         } else{
@@ -74,8 +59,9 @@ public class Liga implements Serializable, Comparable<Liga> {
                     System.out.println(t1.getNome() + " X " + t2.getNome());
                 }
             }*/
-            System.out.println("aaa");
+            System.out.println("\n");
           }
+        
     }
     
     @Override
