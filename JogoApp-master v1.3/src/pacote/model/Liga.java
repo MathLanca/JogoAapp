@@ -53,12 +53,12 @@ public class Liga implements Serializable, Comparable<Liga> {
                 }
             }
         } else{
-            /*
-            for(Time t1 : times){
-                for(Time t2 : times){
-                    System.out.println(t1.getNome() + " X " + t2.getNome());
+            for(int t1 = 0; t1 < numTimes - 1; t1++){
+                for(int t2 = t1 + 1; t2 < numTimes; t2++){
+                    Jogo jogo = new Jogo(times.get(t1), times.get(t2));
+                    System.out.println(jogo.getJogo());
                 }
-            }*/
+            }
             System.out.println("\n");
           }
         
