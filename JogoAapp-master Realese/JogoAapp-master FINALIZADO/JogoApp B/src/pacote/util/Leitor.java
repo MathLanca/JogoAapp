@@ -6,7 +6,6 @@ Gabriel Dias - TIA 31756573*/
 package pacote.util;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 import jogadoresliga.LeitorDadosJogadores;
@@ -14,7 +13,6 @@ import pacote.model.Confederacao;
 import pacote.model.Jogador;
 import pacote.model.Liga;
 import pacote.model.Time;
-import pacote.model.Jogo;
 
 public class Leitor {
 
@@ -22,7 +20,7 @@ public class Leitor {
 
 		LeitorDadosJogadores leitor = new LeitorDadosJogadores();
 		String[] dados = leitor.ler();
-		List<Confederacao> confederacoes = new ArrayList();
+		List<Confederacao> confederacoes = new ArrayList<Confederacao>();
 
 		// carregadar os dados
 		for (String dado : dados) {
